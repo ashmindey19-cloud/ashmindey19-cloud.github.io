@@ -793,6 +793,11 @@ span {
 
     margin-bottom: 20px;
 
+    /* FIX: Prevent Layout Shifting */
+    min-height: 1.7em;
+    line-height: 1.7;
+    width: 100%;
+
     animation: textFloat 4s ease-in-out infinite;
     animation-delay: 0.4s;
 }
