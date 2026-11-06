@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,11 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO & WEBSITE INFORMATION -->
     <meta name="description"
-        content="Ashmin Dey - CSE Student, Programmer and Science Enthusiast">
+        content="Ashmin Dey - CSE Student, Programmer and Science Enthusiast. Explore my portfolio, programming skills, projects and interests.">
 
     <meta name="author" content="Ashmin Dey">
     <meta name="theme-color" content="#080b16">
+    <meta name="robots" content="index, follow">
+    <meta name="copyright" content="Copyright © Ashmin Dey">
+
+    <meta property="og:title" content="Ashmin Dey | Personal Portfolio">
+    <meta property="og:description"
+        content="Explore the personal portfolio of Ashmin Dey, a CSE student and aspiring programmer.">
+    <meta property="og:type" content="website">
 
     <title>Ashmin Dey | Personal Portfolio</title>
 
@@ -96,7 +104,7 @@
     <!-- HEADER -->
     <header class="header" id="header">
 
-        <a href="#home" class="logo">
+        <a href="#home" class="logo" aria-label="Ashmin Dey Home">
             ASHMIN<span>.DEV</span>
         </a>
 
@@ -112,7 +120,7 @@
 
         </button>
 
-        <nav id="mainNav">
+        <nav id="mainNav" aria-label="Main navigation">
 
             <a href="#home" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About</a>
@@ -572,13 +580,88 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="site-footer" id="footer">
 
-        <p>© 2026 Ashmin Dey | All Rights Reserved</p>
+        <div class="footer-content">
 
-        <p>
-            Designed &amp; Built by <span>Ashmin.DEV</span>
-        </p>
+            <a href="#home" class="footer-logo">
+                ASHMIN<span>.DEV</span>
+            </a>
+
+            <p class="footer-description">
+                Exploring technology, building ideas and learning every day.
+            </p>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+            <div class="footer-socials">
+
+                <a href="https://github.com/ashmindey19-cloud"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+                <a href="https://www.facebook.com/ashmin.dey.3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook">
+
+                    <i class="fa-brands fa-facebook"></i>
+
+                </a>
+
+                <a href="https://www.instagram.com/pratmtik/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+                <a href="mailto:ashmin2005@yahoo.com"
+                    aria-label="Email">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; <span id="copyrightYear">2026</span> Ashmin Dey.
+                All Rights Reserved.
+            </p>
+
+            <p class="copyright-notice">
+                All original content, designs and code on this website
+                belong to Ashmin Dey. Reproduction or redistribution
+                without permission is not permitted, except where
+                allowed by applicable law.
+            </p>
+
+            <p>
+                Designed &amp; Developed by
+                <span class="footer-credit">Ashmin.DEV</span>
+            </p>
+
+        </div>
 
     </footer>
 
@@ -676,5 +759,15 @@
 
     <!-- END CHAT WIDGET -->
 
+    <!-- AUTOMATIC COPYRIGHT YEAR -->
+    <script>
+        const copyrightYear = document.getElementById("copyrightYear");
+
+        if (copyrightYear) {
+            copyrightYear.textContent = new Date().getFullYear();
+        }
+    </script>
+
 </body>
 </html>
+```
