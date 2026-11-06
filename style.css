@@ -2416,3 +2416,97 @@ body.light-theme .button-outline:hover {
     }
 
 }
+
+
+
+/* ================= AVAILABILITY STATUS ================= */
+
+/* Keep profile photo and status in the same container */
+.profile-container {
+    position: relative;
+}
+
+/* Keep the original circular profile photo unchanged */
+.profile {
+    position: relative;
+    z-index: 2;
+}
+
+/* Position status at the bottom-right of the profile photo */
+.availability-status {
+    position: absolute;
+    right: -145px;
+    bottom: 8px;
+    z-index: 5;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 8px 14px;
+
+    border: 1px solid rgba(34, 197, 94, 0.35);
+    border-radius: 50px;
+
+    background: rgba(8, 11, 22, 0.95);
+    color: #86efac;
+
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+
+    white-space: nowrap;
+    backdrop-filter: blur(8px);
+}
+
+/* Green active dot */
+.availability-dot {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: #22c55e;
+
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+
+    animation: availabilityPulse 1.8s ease-in-out infinite;
+}
+
+/* Active dot animation */
+@keyframes availabilityPulse {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+    }
+
+    50% {
+        opacity: 0.55;
+        box-shadow: 0 0 15px rgba(34, 197, 94, 0.35);
+    }
+}
+
+/* Light theme */
+body.light-theme .availability-status {
+    background: rgba(255, 255, 255, 0.95);
+    color: #15803d;
+    border-color: rgba(21, 128, 61, 0.3);
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .availability-status {
+        right: -125px;
+        bottom: 5px;
+        padding: 7px 10px;
+        font-size: 13px;
+        gap: 7px;
+    }
+
+    .availability-dot {
+        width: 8px;
+        height: 8px;
+    }
+}
